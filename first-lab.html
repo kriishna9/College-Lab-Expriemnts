@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP Class</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #adffea;
+            padding-top: 140px; /* Header + Nav ka total height */
+        }
+
+        /* Header (includes nav) */
+        header {
+            background-color: #ffe77e;
+            color: rgb(57, 159, 255);
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            margin: 0;
+            border-bottom: 2px solid #ff0000; /* Border at the bottom */
+        }
+
+
+        /* Heading inside header */
+        .heading {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(57, 163, 255);
+            height: 4vh;
+        }
+
+        /* Navbar inside header */
+       nav {
+        background-color: #ffae75;
+        justify-content: center;
+        margin-top: 30px;
+        padding: 0; /* Remove extra vertical padding */ /* Full width */
+        margin-left: 0;
+   }
+
+    nav a, .btn2 {
+        display: inline-block;
+        color: rgb(19, 255, 180);
+        padding: 14px 30px; /* Equal height and spacing */
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        height: 100%; /* Take full navbar height */
+    }
+
+        nav a:hover, .btn2:hover {
+            color: rgb(255, 80, 80);
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 80vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #e8ffb2;
+            padding: 20px;
+            width: 250px;
+            box-sizing: border-box;
+            border-right: 2px solid #ff0404;
+        }
+        .ul{
+            list-style-type: none;
+            padding: 0;
+            font-family: fantasy;
+        }
+
+        /* Content */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about{
+            background-color: rgb(255, 158, 158);
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        .details{
+            background-color: rgb(182, 155, 255);
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff89c2;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Nav inside -->
+    <header>
+        <section class="heading">
+            <h1>Welcome To My Page</h1>
+        </section>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#details">Details</a>
+            <button class="btn2" onclick="showcontact()">Contact</button>
+        </nav>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2><i>Sidebar</i></h2>
+            <p><u>Here you can add anything</u></p>
+            <div class="ul">
+                <b>
+                <li>Name:</li>
+                <li>DOB:</li>
+                <li>Address:</li>
+                <li>Gender:</li>
+                <li>Education:</li>
+                </b>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <h2>Home</h2>
+            <p>Welcome to the home section. Scroll down to see fixed header+navbar.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, optio?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, optio?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, optio?</p>
+        </main>
+    </div>
+
+    <!-- About -->
+     <section id="about" class="about">
+        <h2>About</h2>
+        <button class="btn" onclick="showMessage()">Click Me</button>
+     </section>
+
+     <!-- Details -->
+    <section id="details" class="details">
+        <h2>Details</h2>
+        <p>Here you can add form, data, or any other details.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; All Copyrights To My Company</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("I am Technical Expert with great skills of tech with AI.");
+        }
+
+        function showcontact() {
+            alert("Contact me at: 9876543210");
+        }
+    </script>
+</body>
+</html>
